@@ -1,1 +1,41 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template" client="site">
+    <name>lavelin_bs</name>
+    <creationDate>2017-02-09</creationDate>
+    <author>les</author>
+    <authorEmail>web@lavelin.ru</authorEmail>
+    <authorUrl>http://www.lavelin.ru</authorUrl>
+    <copyright>2016 Lavelin.ru. All Rights Reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.0</version>
+    <description>TPL_LAVELIN_BS_XML_DESCRIPTION</description>
+
+    <files>
+        <folder>css</folder>
+        <folder>fonts</folder>		
+        <folder>html</folder>		
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <filename>index.php</filename>
+        <filename>index.html</filename>
+        <filename>templateDetails.xml</filename>
+    </files>
+
+    <positions>
+    	<position>navigation</position>
+		<position>banner</position>
+		<position>breadcrumbs</position>
+		<position>left</position>
+		<position>bottom-1</position>
+		<position>bottom-2</position>
+		<position>bottom-3</position>
+		<position>footer</position>
+		<position>debug</position>
+    </positions>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_lavelin_bs.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_lavelin_bs.sys.ini</language>
+    </languages>
+</extension>
