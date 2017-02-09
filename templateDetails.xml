@@ -37,5 +37,30 @@
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.tpl_lavelin_bs.ini</language>
         <language tag="en-GB">en-GB/en-GB.tpl_lavelin_bs.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_lavelin_bs.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_lavelin_bs.sys.ini</language>
     </languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="linkColor" type="color" default="#fff"
+						label="TPL_LAVELIN_BS_MENU_LINK_COLOR"
+						description="TPL_LAVELIN_BS_MENU_LINK_COLOR_DESC" />				
+				<field name="logotypeImage" 
+						type="file" 
+						label="TPL_LAVELIN_BS_LOGO_IMAGE" 
+						description="TPL_LAVELIN_BS_LOGO_IMAGE_DESC" 
+						accept="image/*" />
+				<field name="templateStyle" 
+						type="list" 
+						default="0" 
+						label="TPL_LAVELIN_BS_TEMPLATE_STYLE" 
+						description="TPL_LAVELIN_BS_TEMPLATE_STYLE_DESC">
+					  <option value="0">Purple</option>
+					  <option value="1">Green</option>
+				</field>						
+			</fieldset>
+		</fields>
+	</config>
 </extension>
