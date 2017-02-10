@@ -1,1 +1,5 @@
-﻿
+﻿#banner, #left, #footer { background-color:#e3e3e3;}
+
+#breadcrumbs { background-color:#2e2145;}
+
+#content, #bottom-1, #bottom-2, #bottom-3 { background-color:#fff;}
