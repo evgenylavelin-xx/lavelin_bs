@@ -48,10 +48,9 @@
 						label="TPL_LAVELIN_BS_MENU_LINK_COLOR"
 						description="TPL_LAVELIN_BS_MENU_LINK_COLOR_DESC" />				
 				<field name="logotypeImage" 
-						type="file" 
+						type="media" 
 						label="TPL_LAVELIN_BS_LOGO_IMAGE" 
-						description="TPL_LAVELIN_BS_LOGO_IMAGE_DESC" 
-						accept="image/*" />
+						description="TPL_LAVELIN_BS_LOGO_IMAGE_DESC"/>
 				<field name="templateStyle" 
 						type="list" 
 						default="0" 

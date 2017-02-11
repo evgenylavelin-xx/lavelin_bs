@@ -2,13 +2,23 @@
 	$app = JFactory::getApplication();
 	$params = $app->getTemplate(true)->params;
 	
-	$templateStyle = $this->params->get('templateStyle');
-
 	$this->addStyleSheet( 'templates/' . $this->template . '/css/template.css' );	
 	$this->addStyleSheet( 'templates/' . $this->template . '/css/bootstrap.css' );	
 
 	$document = JFactory::getDocument();
 	$document->addScript('templates' . $this->template . '/js/bootstrap.js');	
+	
+	$templateStyle = $this->params->get('templateStyle');
+	$linkColor = $this->params->get('linkColor');
+	$logotypeImage = $this->params->get('logotypeImage');
+	$siteName = $app->get('sitename');
+	
+	if ($logotypeImage) {
+		$logo = '<img src=">' . JUru::root() . $logotypeImage . '" alt=""/>';		
+	}
+	else {
+		$logo = '<span class="site-title">' . $siteName . '</span>';
+	}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
@@ -18,17 +28,26 @@
 		<?php if ($templateStyle == 0) :?>
 			<style>
 				body, #header {background-color:#600051;}
+				.clear-menu > li > a:hover {color: #600051;}
 			</style>
 		<?php else :?>
 			<style>
 				body, #header {background-color:#1c661b;}
+				.clear-menu > li > a:hover {color: #1c661b;}
+			</style>
+		<?php endif; :?>
+		<?php if ($linkColor == 0) :?>
+			<style>
+				.clear-menu > li > a {color: <?php echo $linkColor>;?>;}
 			</style>
 		<?php endif; :?>
 	</head>
 	<body>
 		<div class="container-fluid" id="top">
 			<div class="row" id="header">
-				<div class = "col-sm-4" id="logotype"></div>
+				<div class = "col-sm-4" id="logotype">
+					<a href = "<?php echo this->baesurl ?>">$logo</a>
+				</div>
 				<div class = "col-sm-8" id="navigation">
 					<jdoc:include type="modules" name="navigation" style = "none"/>
 				</div>
