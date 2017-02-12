@@ -27,12 +27,12 @@
 		<jdoc:include type="head" />
 		<?php if ($templateStyle == 0) :?>
 			<style>
-				body, #header {background-color:#600051;}
+				body, #header, #bottom {background-color:#600051;}
 				.clear-menu > li > a:hover {color: #600051;}
 			</style>
 		<?php else :?>
 			<style>
-				body, #header {background-color:#1c661b;}
+				body, #header, #bottom {background-color:#1c661b;}
 				.clear-menu > li > a:hover {color: #1c661b;}
 			</style>
 		<?php endif; :?>
@@ -68,7 +68,9 @@
 				</nav>
 				</div>
 			</div>
-			<div class="row" id="banner"></div>
+			<div class="row" id="banner">
+				<jdoc:include type="modules" name="banner" style = "none"/>
+			</div>
 		</div>
 		<div class="container-fluid" id="middle"></div>
 			<div class="row">
@@ -85,18 +87,18 @@
 					<jdoc:include type="component" />
 				</div>
 			</div>
-			<div class="row">
-				<div class = "col-sm-4" id="bottom-1">
+			<div class="row" id="bottom">
+				<div class = "col-sm-4">
 					<jdoc:include type="modules" name="bottom-1" style = "xhtml"/>
 				</div>
-				<div class = "col-sm-4" id="bottom-2">
+				<div class = "col-sm-4">
 					<jdoc:include type="modules" name="bottom-2" style = "xhtml"/>
 				</div>
-				<div class = "col-sm-4" id="bottom-3">
+				<div class = "col-sm-4">
 					<jdoc:include type="modules" name="bottom-3" style = "xhtml"/>
 				</div>
 			</div>
-		<div class="container-fluid" id="bottom">
+		<div class="container-fluid">
 			<div class="row" id="footer">
 				<jdoc:include type="modules" name="footer" style = "none"/>
 				<jdoc:include type="modules" name="debug" style = "none"/>
