@@ -49,7 +49,23 @@
 					<a href = "<?php echo this->baesurl ?>">$logo</a>
 				</div>
 				<div class = "col-sm-8" id="navigation">
-					<jdoc:include type="modules" name="navigation" style = "none"/>
+				<nav class="navbar">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topmenu" aria-expanded="false">
+							<span class="sr-only">Кнопка выпадающего меню</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <a class="navbar-brand .visible-xs-inline" href="#">Меню</a>
+						</div>
+						<div class="collapse navbar-collapse" id="topmenu">					
+							<jdoc:include type="modules" name="navigation" style = "none"/>					
+						</div>
+					</div>
+				</nav>
 				</div>
 			</div>
 			<div class="row" id="banner"></div>
