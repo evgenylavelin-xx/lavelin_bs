@@ -1,4 +1,4 @@
-﻿<?php defined( '_JEXEC' ) or die( 'Restricted access' );
+﻿﻿<?php defined( '_JEXEC' ) or die( 'Restricted access' );
 	$app = JFactory::getApplication();
 	$params = $app->getTemplate(true)->params;
 	
@@ -35,37 +35,36 @@
 				body, #header, #bottom {background-color:#1c661b;}
 				.clear-menu > li > a:hover {color: #1c661b;}
 			</style>
-		<?php endif; :?>
+		<?php endif; ?>
 		<?php if ($linkColor == 0) :?>
 			<style>
-				.clear-menu > li > a {color: <?php echo $linkColor>;?>;}
+				.clear-menu > li > a {color: <?php echo $linkColor;?>;}
 			</style>
-		<?php endif; :?>
+		<?php endif; ?>
 	</head>
 	<body>
 		<div class="container-fluid" id="top">
 			<div class="row" id="header">
 				<div class = "col-sm-4" id="logotype">
-					<a href = "<?php echo this->baesurl ?>">$logo</a>
+					<a href = "<?php echo $this->baseurl ?>"><?php echo $logo ?></a>
 				</div>
 				<div class = "col-sm-8" id="navigation">
-				<nav class="navbar">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topmenu" aria-expanded="false">
-							<span class="sr-only">Кнопка выпадающего меню</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						  </button>
-						  <a class="navbar-brand .visible-xs-inline" href="#">Меню</a>
+					<nav class="navbar">
+						<div class="container-fluid">
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topmenu" aria-expanded="false">
+								<span class="sr-only">Кнопка выпадающего меню</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+							  <a class="navbar-brand .visible-xs-inline" href="#">Меню</a>
+							</div>
+							<div class="collapse navbar-collapse" id="topmenu">					
+								<jdoc:include type="modules" name="navigation" style = "none"/>					
+							</div>
 						</div>
-						<div class="collapse navbar-collapse" id="topmenu">					
-							<jdoc:include type="modules" name="navigation" style = "none"/>					
-						</div>
-					</div>
-				</nav>
+					</nav>
 				</div>
 			</div>
 			<div class="row" id="banner">
